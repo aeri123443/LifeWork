@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+export NODE_PATH='/Users/aeri/nodeenv-VDTWeb/lib/node_modules'
+export NPM_CONFIG_PREFIX='/Users/aeri/nodeenv-VDTWeb'
+export npm_config_prefix='/Users/aeri/nodeenv-VDTWeb'
+exec 'nodeenv-VDTWeb/bin/node' "$@"

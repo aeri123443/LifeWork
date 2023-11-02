@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+</head>
+<link rel="stylesheet" href="../static/css/body.css">
+<body>
+    <link rel="stylesheet" href="../static/css/login.css">
+    <div id="grady"></div>
+    <div id="wrap_screen">
+        <div id="wrap_login">
+            <div id="login_left"></div>
+            <div id="signup_rigit" class="login_rigit">
+                <form id="form_signup">
+                    <div id="welcome" class="loginform-item">회원가입</div>
+                    <div id="line_or" class="loginform-item">
+                    </div>
+                    <div class="loginform-item">
+                        <input id="signin_user-name" class="input_login-text" placeholder=" 이름 또는 닉네임">
+                    </div>
+                    <div class="loginform-item">
+                        <input id="signin_user-id" class="input_login-text" placeholder=" 아이디">
+                    </div>
+                    <div class="loginform-item">
+                        <input type="password" id="signin_user-pw1" class="input_login-text" placeholder=" 비밀번호">
+                    </div>
+                    <div class="loginform-item">
+                        <input type="password" id="signin_user-pw2" class="input_login-text" placeholder=" 비밀번호 재입력">
+                    </div>
+                    <div class="loginform-item">
+                        <input type="email" id="signin_user-mail" class="input_login-text" placeholder=" 이메일 주소">
+                    </div>
+                </form>
+                <div class="wrap_button-href">
+                    <div class="loginform-item">
+                        <button id="signin-submit" class="btn_sign-submit">회원가입</button>
+                    </div>
+                    <div id="login-assist" class="loginform-item">
+                        <div id="keep-login"></div>
+                        <div id="account-assist">
+                            <span id="href_login" class="href_text-bold" onclick="location.href='./login.html';">로그인</span>
+                            |
+                            <span id="href_forgotpw">비밀번호 찾기</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="../static/js/signup.js"></script>
+</html>

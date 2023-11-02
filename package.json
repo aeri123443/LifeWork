@@ -1,0 +1,13 @@
+{
+  "name": "vdtguide-web",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "<VDT 증후군 예방 및 개선 가이드> 프로젝트의 웹 서버입니다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

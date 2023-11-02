@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+    <script>
+        // 로그인 페이지로 리디렉션할 URL
+        var loginPageURL = "templates/login.html";
+
+        // 일정 시간(예: 3초 후)이 지난 후 로그인 페이지로 리디렉션
+        setTimeout(function () {
+            window.location.href = loginPageURL;
+        }, 0); // 3초 (3000 밀리초)
+    </script>
+    
+    <a href="templates/login.html">로그인 화면</a>
+    <a href="templates/monitoring.html">메인 모니터링 화면</a> 
+</body>
+</html>
