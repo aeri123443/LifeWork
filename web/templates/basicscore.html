@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>사용자 기준 자세</title>
+    <link rel="stylesheet" href="../static/css/body.css" />
+    <link rel="stylesheet" href="../static/css/color.css" />
+    <link rel="stylesheet" href="../static/css/header.css" />
+    <link rel="stylesheet" href="../static/css/monitoring.css" />
+    <link rel="stylesheet" href="../static/css/login.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet@2.2.2/dist/posenet.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core@3.11.0/dist/tf-core.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter@3.11.0/dist/tf-converter.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl@3.11.0/dist/tf-backend-webgl.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection@0.0.6/dist/pose-detection.min.js"></script>
+  </head>
+  <body>
+    <div id="grady"></div>
+
+    <div id="wrap_screen">
+      <!--
+        <div id="wrap_login">
+            <div id="login_left"></div>
+            <div class="login_rigit">
+                <form  id="form_signup">
+                    <div id="welcome" class="loginform-item">환영합니다!</div>
+                    <div id="loginwith" class="loginform-item">
+                        <div id="login-google"></div>
+                        <div id="login-naver"></div>
+                    </div>
+                    <div id="line_or" class="loginform-item">
+                        <span>또는</span>
+                    </div>
+                    <div class="loginform-item">
+                        <input id="user_id" class="input_login-text" placeholder=" ID">
+                    </div>
+                    <div class="loginform-item">
+                        <input type="password" id="user_pw" class="input_login-text" placeholder=" Password">
+                    </div>
+                </form>
+                <div class="wrap_button-href">
+                    <div class="loginform-item">
+                        <button id="login-submit" class="btn_sign-submit">로그인</button>
+                    </div>
+                    <div id="login-assist" class="loginform-item">
+                        <div id="keep-login">
+                            <input type="checkbox" id="checkbox_keep-login">
+                            <label for="checkbox_keep-login">로그인 상태 유지</label>
+                        </div>
+                        <div id="account-assist">
+                            <span id="href_signup" class="href_text-bold" onclick="location.href='./signup.html';">회원가입</span>
+                            |
+                            <span id="href_forgotpw">비밀번호 찾기</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    -->
+      <div class="main-content">
+        <div class="wrap_main" style="margin: 0">
+          <div class="monitoring_top">
+            <div id="wrap_video">
+              <video
+                id="monitoring_video"
+                width="640"
+                height="480"
+                autoplay
+                muted
+                playsinline
+              ></video>
+              <canvas id="canvas_pose-estimation"></canvas>
+            </div>
+          </div>
+          <div class="monitoring_bottom">
+            <!-- <div id="warp_score">
+                    <p class="text_score">SCORE: <span id="num_score-highlight">96</span></p>
+                </div> -->
+            <div id="wrap_monitoring-buttons">
+              <!--<button id="btn_option-monitoring" class="btn_monitoring">시작</button>-->
+              <button
+                id="btn_stop-monitoring"
+                class="btn_monitoring"
+                style="display: none"
+              >
+                종료
+              </button>
+              <button
+                id="btn_start-monitoring"
+                class="btn_monitoring"
+                style="display: block"
+              >
+                시작
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script type="module" src="../static/js/controlcookie.js"></script>
+  <script type="module" src="../static/js/basicscore.js"></script>
+</html>

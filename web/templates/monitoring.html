@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>모니터링</title>
+    <link rel="stylesheet" href="../static/css/body.css">
+    <link rel="stylesheet" href="../static/css/color.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/monitoring.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet@2.2.2/dist/posenet.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core@3.11.0/dist/tf-core.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter@3.11.0/dist/tf-converter.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl@3.11.0/dist/tf-backend-webgl.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection@0.0.6/dist/pose-detection.min.js"></script>    
+</head>
+<body>
+    <header>
+        <div class="wrap_header">
+            <nav>
+                <i class="logo"></i>
+                <ul>
+                    <li>
+                        <div class="div_nav" onclick="location.href='./monitoring.html';">
+                            <span class="nav_selected">모니터링</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="div_nav">
+                            <span>사용 방법</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="div_nav" onclick="location.href='./analysis.html';">
+                            <span>자세 분석</span>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="wrap_user">
+                <div>&#9660; <span id="text_user-name">홍길동</span> 님 </div>
+                <i class="menu_user"></i>
+            </div>
+            <!--
+            <i class="menu_user"></i>
+            -->
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="wrap_main">
+            <div class="monitoring_top">
+                <div id="wrap_video">
+                    <video id="monitoring_video" width="640" height="480" autoplay muted playsinline></video>
+                    <canvas id="canvas_pose-estimation"></canvas>
+                </div>
+            </div>
+            <div class="monitoring_bottom">
+                <div id="warp_score">
+                    <p class="text_score">SCORE: <span id="num_score-highlight">96</span></p>
+                </div>
+                <div id="wrap_monitoring-buttons">
+                    <!--<button id="btn_option-monitoring" class="btn_monitoring">시작</button>-->
+                    <button id="btn_stop-monitoring" class="btn_monitoring" style="display: none;">종료</button>
+                    <button id="btn_start-monitoring" class="btn_monitoring" style="display: block;">시작</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="../static/js/controlcookie.js"></script>
+<script type="module" src="../static/js/monitoring.js"></script>
+<script type="module" src="../static/js/header.js"></script>
+<script type="module" src="../static/js/bttest.js"></script>
+
+</html>

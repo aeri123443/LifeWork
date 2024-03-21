@@ -1,0 +1,146 @@
+.section_analysis{
+    width: 90%;
+    margin-top: 6em;
+    padding: 0 1em 1em 1em ;
+    border: 0.2em solid var(--skyblue);
+    border-radius: 0.7em;
+    box-sizing: border-box;
+}
+
+.title_analysis{
+    display: inline-flex;
+    position: relative;
+    top: -1em;
+    left: -0.5em;
+}
+
+.h2_analysis{
+    display: inline;
+    margin: 0;
+    padding: 0 0.3em;
+    font-weight: 900;
+    background-color: var(--white);
+}
+
+.small_analysis{
+    height: 1rem;
+    font-weight: 200;
+}
+
+.wrap_analysis{
+    margin: 0 auto;
+    width: 43em;
+    height: 8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrap_weekly-analysis{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inner_analysis{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+.inner_weekly-analysis{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.dividing_inner-analysis{
+    width: 2px;
+    height: 7em;
+    margin: 0 0.5em;
+    background-color: var(--black);
+}
+
+.img_analysis{
+    width: 8em;
+    height: 8em;
+    background-size: contain;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+
+.text_analysis{
+    flex: 1;
+    font-weight: 300;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.text_analysis_left{
+    text-align: left;
+    margin-top: 0;
+    margin-left: 16px;
+}
+
+.text_analysis-highlight{
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+.num_analysis-highlight{
+    font-weight: 900;
+    font-size: 1.5em;
+    color: var(--blue);
+}
+
+.wrap_weekly_top{
+    display: flex;
+}
+
+.weekly-select{
+    margin-top: auto;
+    margin-bottom: 1.5em;
+    margin-right: 16px;
+}
+
+.weekly-chart{
+    width: 100%;
+    height: 20em;
+}
+
+.wrap_monthly_bottom{
+    width: 100%;
+    height: 20em;
+}
+
+#monthly-linechart{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.tooltip{
+    background-color: var(--black);
+    opacity: 0.5;
+    border-radius: 5px;
+    padding: 5px;
+    color: var(--white);
+}
+
+.tooltip:after {
+    border-top: 7px solid var(--black);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 0px solid transparent;
+    content: "";
+    position: absolute;
+    left: 5px;
+    bottom: -7px;
+}
+/*
+  .style("opacity", 70)
+  .attr("class", "tooltip")
+  .style("color", colorNames['--white'])
+  .style("border-radius", "5px")
+  .style("padding", ".5em")
+*/
