@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>분석</title>
+    <link rel="stylesheet" href="../static/css/body.css">
+    <link rel="stylesheet" href="../static/css/color.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/analysis.css">
+    
+    <!--<script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/cal-heatmap/dist/cal-heatmap.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/cal-heatmap/dist/cal-heatmap.css">-->
+
+    <script src="https://d3js.org/d3.v4.js"></script>
+
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <header>
+        <div class="wrap_header">
+            <nav>
+                <i class="logo"></i>
+                <ul>
+                    <li >
+                        <div class="div_nav" onclick="location.href='./monitoring.html';">
+                            <span>모니터링</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="div_nav">
+                            <span>사용 방법</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="div_nav">
+                            <span class="nav_selected" onclick="location.href='./analysis.html';">자세 분석</span>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="wrap_user">
+                <div>&#9660; <span id="text_user-name">홍길동</span> 님 </div>
+                <i class="menu_user"></i>
+            </div>
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="wrap_main">
+            <section class="section_analysis"> 
+                <div class="title_analysis">
+                <h2 class="h2_analysis">하루 분석</h2>
+                <small class="small_analysis">Daily Analysis</small>
+                </div>
+                <div class="wrap_analysis">
+                    <div class="inner_analysis">
+                        <i class="img_analysis" style="background-image: url('../../image/icon_clock.png')"></i>
+                        <p class="text_analysis">오늘 바른 자세를<br><span class="text_analysis-highlight"><span id="num_daily-hour" class="num_analysis-highlight">2</span>시간 <span id="num_daily-min" class="num_analysis-highlight">35</span>분</span><br>유지했어요.</p>
+                    </div>
+                    <div class="dividing_inner-analysis"></div>
+                    <div class="inner_analysis">
+                        <i class="img_analysis" style="background-image: url('../../image/icon_sitting.png')"></i>
+                        <p class="text_analysis">바른 자세 점수<br><span class="text_analysis-highlight"><span id="num_daily-score" class="num_analysis-highlight" style="color: var(--yellow)">59</span>점</span><br>양호해요!</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section_analysis"> 
+                <div class="title_analysis">
+                <h2 class="h2_analysis">주간 분석</h2>
+                <small class="small_analysis">Weekly Analysis</small>
+                </div>
+                <div class="wrap_weekly-analysis">
+                    <div class="inner_weekly-analysis">
+                        <div class="wrap_weekly_top">
+                            <p class="text_analysis text_analysis_left">이번 주의 자세는 평균 <span class="text_analysis-highlight"><span id="num_weekly-score" class="num_analysis-highlight" style="color: var(--green)">94</span>점</span>이에요.</p>
+                            <div class="weekly-select">&#9664;  2024.01.14. ~ 2024.01.20.  &#9658;</div>
+                        </div>
+                        <div class="weekly-chart">
+                            <canvas id="canvas_weekly-linechart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section_analysis"> 
+                <div class="title_analysis">
+                <h2 class="h2_analysis">월간 분석</h2>
+                <small class="small_analysis">Monthly Analysis</small>
+                </div>
+                <div class="wrap_weekly-analysis">
+                    <div class="inner_weekly-analysis">
+                        <div class="wrap_weekly_top">
+                            <p class="text_analysis text_analysis_left">이번 달의 자세는 평균 <span class="text_analysis-highlight"><span id="num_monthly-score" class="num_analysis-highlight" style="color: var(--red)">13</span>점</span>이에요.</p>
+                            <div class="weekly-select">&#9664;  2024.01.  &#9658;</div>
+                        </div>
+                        <div class="wrap_monthly_bottom">
+                            <div id="monthly-linechart"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script type="module" src="../static/js/controlcookie.js"></script>
+    <script type="module" src="../static/js/analysisWeekly.js"></script>
+    <script type="module" src="../static/js/analysisdaily.js"></script>
+    <script type="module" src="../static/js/analysismonthly.js"></script>
+    <script type="module" src="../static/js/color.js"></script>
+    <script type="module" src="../static/js/header.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+header{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    height: 6em;
+    background-color: var(--white);
+    z-index: 1000;
+}
+
+.wrap_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 90%;
+    height: 5em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid var(--black);
+}
+
+.logo{
+    display: inline-block;
+    width: 10em;
+    height: 4em;
+    background-image: url("../../image/logo.png");
+    background-size: contain;
+    background-position:left;
+    background-position-y: 1em;
+    background-repeat: no-repeat;
+}
+
+nav{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+nav ul{
+    display: inline;
+    margin: 0;
+}
+
+nav li{
+    display: inline-block;
+    list-style:none;
+}
+
+
+.div_nav{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 6em;
+    height: 100%;
+    margin-bottom: 0.5em;
+
+}
+
+.div_nav:hover{
+    cursor: pointer;
+    background-color: var(--skyblue);
+    border-radius: 2em;
+}
+
+.div_nav span{
+    font-weight: 200;
+}
+
+.nav_selected{
+    font-weight: 500 !important;
+}
+
+.wrap_user{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 10em;
+    height: auto;
+}
+
+.menu_user{
+    display: block;
+    width: 2.5em;
+    height: 2.5em;
+    background-image: url("../../image/icon_user.png");
+    background-size: contain;
+    background-position:right;
+    background-repeat: no-repeat;
+    margin-bottom: 0.5em;
+}
+
+/* main content */
+
+.main-content{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.wrap_main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    margin: 6em 0;
+}
